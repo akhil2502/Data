@@ -28,7 +28,6 @@ namespace List
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} inserted into Linked List", node.data);
         }
         /// <summary>
         /// display the elements of linkedlist.
@@ -43,9 +42,32 @@ namespace List
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data + " ");
+                Console.Write(temp.data + "->");
                 temp = temp.next;
             }
+            Console.Write("null \n");
+        }
+        /// <summary>
+        /// remove the last element from linkedlist.
+        /// </summary>
+        /// <returns></returns>
+        internal Node PopLast()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (head.next == null)
+            {
+                return null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+            return head;
         }
     }
 }

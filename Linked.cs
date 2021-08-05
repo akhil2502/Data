@@ -6,12 +6,7 @@ namespace List
 {
     class LinkedList
     {
-        // variables
         internal Node head;
-        /// <summary>
-        /// add elements into linkedlist.
-        /// </summary>
-        /// <param name="data"></param>
         internal void Add(int data)
         {
             Node node = new Node(data);
@@ -30,9 +25,6 @@ namespace List
             }
             Console.WriteLine("{0} inserted into Linked List", node.data);
         }
-        /// <summary>
-        /// display the elements of linkedlist.
-        /// </summary>
         internal void Display()
         {
             Node temp = this.head;

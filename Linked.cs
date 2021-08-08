@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -79,6 +80,10 @@ namespace List
             prev.next = newestNode;
             return this.head;
         }
+        /// <summary>
+        /// remove the first element from linkedlist.
+        /// </summary>
+        /// <returns></returns>
         internal Node Pop()
         {
             if (this.head == null)
@@ -88,6 +93,10 @@ namespace List
             this.head = this.head.next;
             return this.head;
         }
+        /// <summary>
+        /// remove the last element from linkedlist.
+        /// </summary>
+        /// <returns></returns>
         internal Node PopLast()
         {
             if (this.head == null)
@@ -106,6 +115,11 @@ namespace List
             NewNode.next = null;
             return head;
         }
+        /// <summary>
+        /// search element from linked list.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns>count</returns>
         public int Search(int value)
         {
             Node node = this.head;
